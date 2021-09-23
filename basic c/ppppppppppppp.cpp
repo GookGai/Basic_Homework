@@ -1,6 +1,6 @@
 #include <stdio.h>
 main(){
-	int a,n,s,r,ans,sum=0;
+	int a,n,s,r,ans,sum=0,leauk;
 	scanf("%d",&a);
 	a=a-1;
 	for(int i =0;i<5;i++){
@@ -9,10 +9,11 @@ main(){
 		s = (a/10)%10;
 		r = a/100;
 		ans = a - n*100 -s*10 -r; 
+		leauk = n*100+s*10+r;
 		if(ans<0)
 		ans = ans*-1;
 		sum = sum+ans;
-		printf("%d - %d%d%d = %d\n",a,n,s,r,ans);
+		printf("%d - %d = %d\n",a,leauk,ans);
 	}
 	printf("sum = %d",sum);
 	
